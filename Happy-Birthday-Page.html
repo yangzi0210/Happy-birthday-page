@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>生日快乐 - 可子</title>
+   <!-- 网站标题 -->
+    <title>生日快乐 - (TA 的名字)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <style>
@@ -96,8 +97,9 @@
 </head>
 
 <body>
-<!---->
+
 <div class="cs">
+    <!-- 旋转图片效果 可以在此处放置 TA 的图片 -->
     <img src="https://www.ghostoact.com/static/arts/img/skins/Seraphine_Splash_24.jpg" id="logo">
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
@@ -110,7 +112,7 @@
 <script language="javascript">
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
-        BirthDay = new Date("04/30/2001");//
+        BirthDay = new Date("04/30/2001");// TA 的出生日期
         today = new Date();
         timeold = (today.getTime() - BirthDay.getTime());
         sectimeold = timeold / 1000
@@ -133,8 +135,8 @@
         init: function () {
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
-			//
-            S.UI.simulate("杨可|可子|buddy|22|岁|生|日|快|乐|#countdown 5|#time");
+			// 生日祝福动态画面循环动态展示 参数设置
+            S.UI.simulate("名字|昵称|祝你|XX|岁|生|日|快|乐|#countdown 5|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
